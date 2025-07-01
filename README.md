@@ -1,25 +1,18 @@
 # Phasmid
 A Ruby on Rails web app for tracking bugs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+Ruby Version: 3.2 or newer
 
-Things you may want to cover:
+## How to set up and run
+1. `git clone https://github.com/dfebs/phasmid.git`
+1. `cd phasmid`
+1. `bundle install`
+1. `bin/rails db:setup`
+1. `bin/rails server`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Todo
+- [ ] Add projects
+- [ ] Add memberships
+- [ ] Add bugs (heh)
+- [ ] Add tests
