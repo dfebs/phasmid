@@ -9,9 +9,11 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
- * {
+ p, a, label, h1 {
     color: #ffffff
  }
+
+
 
  body {
     background-color: #333333;
