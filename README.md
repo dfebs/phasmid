@@ -12,7 +12,7 @@ Ruby Version: 3.2 or newer
 1. `bin/rails server`
 
 ## Todo
-- [ ] Add projects
+- [x] Add projects
 - [ ] Add memberships
-- [ ] Add bugs (heh)
+- [x] Add bugs (heh)
 - [ ] Add tests
