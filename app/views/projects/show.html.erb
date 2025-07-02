@@ -8,3 +8,7 @@
 
   <%= button_to "Destroy this project", @project, method: :delete %>
 </div>
+
+<%= render "bugs/form", project: @project, bug: Bug.new %>
+
+<%= render @project.bugs %>
