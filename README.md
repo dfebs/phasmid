@@ -13,6 +13,13 @@ Ruby Version: 3.2 or newer
 
 ## Todo
 - [x] Add projects
-- [ ] Add memberships
+- [x] Add memberships
 - [x] Add bugs (heh)
 - [ ] Add tests
+- [ ] Add tags for bugs
+
+## Testing Considerations
+- [ ] Simple scenario of adding projects
+- [ ] Simple scenario of adding bugs to projects
+- [ ] Error scenario in creating a project. Specifically hitting the `rescue ActiveRecord::RecordInvalid` block
+- [ ] Might have to remove some stuff from the Project tests (like stuff in fixtures) since they don't have dedicated "owner" fields anymore

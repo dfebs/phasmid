@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_02_013736) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_03_005329) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -60,13 +60,21 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_02_013736) do
     t.index ["project_id"], name: "index_bugs_on_project_id"
   end
 
+  create_table "memberships", force: :cascade do |t|
+    t.integer "member_id", null: false
+    t.integer "project_id", null: false
+    t.string "role", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_memberships_on_member_id"
+    t.index ["project_id"], name: "index_memberships_on_project_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.integer "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_projects_on_owner_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -92,6 +100,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_02_013736) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bugs", "projects"
   add_foreign_key "bugs", "users", column: "author_id"
-  add_foreign_key "projects", "users", column: "owner_id"
+  add_foreign_key "memberships", "projects"
+  add_foreign_key "memberships", "users", column: "member_id"
   add_foreign_key "sessions", "users"
 end

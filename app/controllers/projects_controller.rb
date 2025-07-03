@@ -21,12 +21,21 @@ class ProjectsController < ApplicationController
 
   # POST /projects or /projects.json
   def create
-    @project = Current.user.projects.new(project_params)
+    @project = Project.new(project_params)
+    @membership = Membership.new(project: @project, member: Current.user, role: "owner")
 
-    respond_to do |format|
-      if @project.save
+    begin
+      ActiveRecord::Base.transaction do
+        @project.save!
+        @membership.save!
+      end
+
+      respond_to do |format|
         format.html { redirect_to @project, notice: "Project was successfully created." }
-      else
+      end
+
+    rescue ActiveRecord::RecordInvalid
+      respond_to do |format|
         format.html { render :new, status: :unprocessable_entity }
       end
     end
