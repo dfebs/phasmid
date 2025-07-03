@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  author: one
-  project: one
+bug_one:
+  title: bug_one
+  author: user_one
+  project: project_one
   notes: MyString
 
-two:
+bug_two:
   title: MyString
-  author: two
-  project: two
+  author: user_two
+  project: project_two
   notes: MyString
