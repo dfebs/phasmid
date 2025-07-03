@@ -100,7 +100,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_03_005329) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bugs", "projects"
   add_foreign_key "bugs", "users", column: "author_id"
-  add_foreign_key "memberships", "projects"
-  add_foreign_key "memberships", "users", column: "member_id"
+  add_foreign_key "memberships", "projects", on_delete: :cascade
+  add_foreign_key "memberships", "users", column: "member_id", on_delete: :cascade
   add_foreign_key "sessions", "users"
 end
