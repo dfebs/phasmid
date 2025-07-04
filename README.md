@@ -15,8 +15,11 @@ Ruby Version: 3.2 or newer
 - [x] Add projects
 - [x] Add memberships
 - [x] Add bugs (heh)
+- [x] Show instant feedback when adding a bug
+- [ ] Show bugs added in real time
 - [ ] Add tests
 - [ ] Add tags for bugs
+
 
 ## Testing Considerations
 - [ ] Simple scenario of adding projects

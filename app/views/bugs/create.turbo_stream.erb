@@ -1,0 +1,7 @@
+<%= turbo_stream.prepend "bugs" do %>
+    <%= render "bugs/bug", bug: @bug %>
+<% end %>
+
+<%= turbo_stream.replace dom_id(Bug.new) do %>
+    <%= render "bugs/form", bug: Bug.new, project: @project %>
+<% end %>

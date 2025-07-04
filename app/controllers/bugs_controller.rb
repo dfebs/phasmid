@@ -12,9 +12,9 @@ class BugsController < ApplicationController
 
     respond_to do |format|
       if @bug.save
+        format.turbo_stream
         format.html { redirect_to @project, notice: "Bug was successfully created." }
       else
-
         flash.now[:alert] = "Failed to create bug"
         format.html { render "projects/show", status: :unprocessable_entity }
       end

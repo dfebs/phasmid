@@ -1,15 +1,17 @@
-<h1>Add Bug</h1>
-<%= form_with model: [project, bug] do |form| %>
-    <div>
-        <%= form.label :title %>
-        <%= form.text_field :title, required: true %>
-    </div>
-    <div>
-        <%= form.label :description %>
-        <%= form.rich_text_area :description %>
-    </div>
+<%= turbo_frame_tag dom_id(Bug.new) do %>
+    <h1>Add Bug</h1>
+    <%= form_with model: [project, bug] do |form| %>
+        <div>
+            <%= form.label :title %>
+            <%= form.text_field :title, required: true %>
+        </div>
+        <div>
+            <%= form.label :description %>
+            <%= form.rich_text_area :description %>
+        </div>
 
-    <div>
-        <%= form.submit %>
-    </div>
+        <div>
+            <%= form.submit %>
+        </div>
+    <% end %>
 <% end %>

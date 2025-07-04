@@ -11,4 +11,6 @@
 
 <%= render "bugs/form", project: @project, bug: Bug.new %>
 
-<%= render @project.bugs.order(created_at: :desc) %>
+<div id="bugs">
+  <%= render @project.bugs.order(created_at: :desc) %>
+</div>
