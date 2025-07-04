@@ -11,6 +11,7 @@
 
 <%= render "bugs/form", project: @project, bug: Bug.new %>
 
+<%= turbo_stream_from "bugs" %>
 <div id="bugs">
   <%= render @project.bugs.order(created_at: :desc) %>
 </div>

@@ -16,7 +16,8 @@ Ruby Version: 3.2 or newer
 - [x] Add memberships
 - [x] Add bugs (heh)
 - [x] Show instant feedback when adding a bug
-- [ ] Show bugs added in real time
+- [x] Show bugs from other users added in real time
+- [ ] Make bug form appear and reappear at press of a button
 - [ ] Add tests
 - [ ] Add tags for bugs
 
