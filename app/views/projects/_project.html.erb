@@ -13,5 +13,11 @@
     <strong>Owner:</strong>
     <%= project.owner.username %>
   </p>
+    <%= link_to "Edit this project", edit_project_path(project) %> |
+    <%= link_to "Show this project", project %> |
+    <%= link_to "Back to projects", projects_path %>
 
+    <%= button_to "Destroy this project", @project, method: :delete %>
+
+      
 </div>

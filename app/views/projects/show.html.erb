@@ -1,17 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<div id="page_content">
+  <p style="color: green"><%= notice %></p>
+  <%= render @project %>
 
-<%= render @project %>
+  <%= render "bugs/form", project: @project, bug: Bug.new %>
 
-<div>
-  <%= link_to "Edit this project", edit_project_path(@project) %> |
-  <%= link_to "Back to projects", projects_path %>
-
-  <%= button_to "Destroy this project", @project, method: :delete %>
-</div>
-
-<%= render "bugs/form", project: @project, bug: Bug.new %>
-
-<%= turbo_stream_from "bugs" %>
-<div id="bugs">
-  <%= render @project.bugs.order(created_at: :desc) %>
+  <%= turbo_stream_from "bugs" %>
+  <div id="bugs">
+    <%= render @project.bugs.order(created_at: :desc) %>
+  </div>
 </div>

@@ -1,3 +1,5 @@
-<h1><%= bug.title %></h1>
-<p><b>Author: </b><%= bug.author.username %></p>
-<%= bug.description %>
+<div id="<%= dom_id(bug) %>">
+    <h1><%= bug.title %></h1>
+    <p><b>Author: </b><%= bug.author.username %></p>
+    <%= bug.description %>
+</div>

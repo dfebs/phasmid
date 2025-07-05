@@ -9,7 +9,60 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
- trix-editor {
+ :root {
+  --color-background: #1d3b11;
+  --color-primary: #4c721d;
+  --color-accent: #99b127;
+  --color-warning: #debf53;
+  --color-surface: #edd090;
+  --color-base: #f8e8ca;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+}
+
+p, h1, label {
+  color: var(--color-background);
+}
+
+a {
+  color: var(--color-primary)
+}
+
+ #container {
+  background-color: var(--color-background);
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 100%;
+ }
+
+ div[id^="project_"] {
+  padding: 1em;
+  border-radius: 2em;
+  background-color: var(--color-surface);
+ }
+
+  div[id^="bug_"] {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 2em;
+  background-color: var(--color-surface);
+ }
+
+ #page_content {
+  grid-column: 2;
+  grid-row: 1
+ }
+
+.trix-content {
+  color: var(--color-background)
+}
+
+
+ /* trix-editor {
   background-color: #212529;
   color: white;
   border: 1px solid #444;
@@ -35,4 +88,4 @@ trix-editor [data-trix-placeholder] {
 
 .trix-button--icon::before {
   filter: invert(100%);
-}
+} */
