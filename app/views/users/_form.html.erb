@@ -1,0 +1,31 @@
+<div id="user_form">
+    <h1>NOTE: THIS IS A PRIMITIVE PIECE OF SOFTWARE</h1>
+    <p>While it does hash passwords and all that fancy stuff, I'd still recommend using a password you don't normally use. You can use fake emails as long as they look like an email.</p>
+
+    <h1>Register New User</h1>
+    <%= form_with model: user do |form| %>
+        <div>
+            <%= form.label :email_address %>
+            <%= form.email_field :email_address %>
+        </div>
+        <div>
+            <%= form.label :username %>
+            <%= form.text_field :username %>
+        </div>
+        <div>
+            <%= form.label :password %>
+            <%= form.password_field :password %>
+        </div>
+        <div>
+            <%= form.label :password_confirmation %>
+            <%= form.password_field :password_confirmation %>
+        </div>
+        <div>
+            <%= form.label :time_zone %>
+            <%= form.select :time_zone, Constants::TIME_ZONES, selected: "America/New_York" %>
+        </div>
+        <div>
+            <%= form.submit %>
+        </div>
+    <% end %>
+</div>

@@ -17,6 +17,8 @@ Ruby Version: 3.2 or newer
 - [x] Add bugs (heh)
 - [x] Show instant feedback when adding a bug
 - [x] Show bugs from other users added in real time
+- [ ] See if getting page_content at the top level will work
+- [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame
 - [ ] Add css animations
 - [ ] Create consistent flash messages with stimulus (reference: https://www.hotrails.dev/turbo-rails/flash-messages-hotwire)
 - [ ] Make bug form appear and reappear at press of a button

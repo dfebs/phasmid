@@ -45,7 +45,7 @@ a {
   grid-template-rows: 100%;
  }
 
- div[id^="project_"], div[id^="bug_"] {
+ div[id^="project_"], div[id^="bug_"], div[id^="user_"] {
   padding: 1em;
   margin: 1em;
   border-radius: 2em;
