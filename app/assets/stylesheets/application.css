@@ -28,6 +28,10 @@ p, h1, label {
   color: var(--color-background);
 }
 
+h1 {
+  font-family: "Departure Mono";
+}
+
 a {
   color: var(--color-primary)
 }
