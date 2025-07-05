@@ -24,16 +24,18 @@ html, body {
   background-color: var(--color-background);
 }
 
-p, h1, label {
+p, label {
   color: var(--color-background);
+  font-family: "Ubuntu Mono";
 }
 
 h1 {
   font-family: "Departure Mono";
+  color: var(--color-background);
 }
 
 a {
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
  #container {
@@ -56,7 +58,8 @@ a {
  }
 
 .trix-content {
-  color: var(--color-background)
+  color: var(--color-background);
+  font-family: "Ubuntu Mono";
 }
 
 
