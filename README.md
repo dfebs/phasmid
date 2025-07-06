@@ -1,5 +1,5 @@
 # Phasmid
-A Ruby on Rails web app for tracking bugs
+A Ruby on Rails web app for tracking bugs.
 
 ## Requirements
 Ruby Version: 3.2 or newer
@@ -18,6 +18,7 @@ Ruby Version: 3.2 or newer
 - [x] Show instant feedback when adding a bug
 - [x] Show bugs from other users added in real time
 - [x] See if getting page_content at the top level will work
+- [ ] Figure out how bug priority feature will work
 - [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame
 - [ ] Add css animations
 - [ ] Create consistent flash messages with stimulus (reference: https://www.hotrails.dev/turbo-rails/flash-messages-hotwire)
@@ -25,7 +26,7 @@ Ruby Version: 3.2 or newer
 - [ ] Add tests
 - [ ] Add tags for bugs
 - [ ] Figure out how to do an inline thing for "author" and "created" section in bugs. How might it integrate with bug notes?
-- [ ] Create a simple navbar from scratch
+- [ ] Create a simple navbar from scratch, add the phasmid logo
 
 ## Testing Considerations
 - [ ] Simple scenario of adding projects
