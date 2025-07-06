@@ -1,0 +1,20 @@
+<div id="tag_form">
+    <h1>Add Tag</h1>
+    <%= form_with model: [project, tag] do |form| %>
+        <div>
+            <%= form.label :name %>
+            <%= form.text_field :name, required: true %>
+        </div>
+        <div>
+            <%= form.label :weight %>
+            <%= form.number_field :weight %>
+        </div>
+        <div>
+            <%= form.label :color %>
+            <%= form.color_field :color %>
+        </div>
+        <div>
+            <%= form.submit %>
+        </div>
+    <% end %>
+</div>

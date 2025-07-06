@@ -18,6 +18,7 @@ Ruby Version: 3.2 or newer
 - [x] Show instant feedback when adding a bug
 - [x] Show bugs from other users added in real time
 - [x] See if getting page_content at the top level will work
+- [ ] Actually use memberships
 - [ ] Figure out how bug priority feature will work
 - [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame
 - [ ] Add css animations
