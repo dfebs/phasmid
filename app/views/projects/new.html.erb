@@ -1,10 +1,8 @@
-<div id="page_content">
-  <% content_for :title, "New project" %>
+<% content_for :title, "New project" %>
 
-  <%= render "form", project: @project, action: "New Project" %>
+<%= render "form", project: @project, action: "New Project" %>
 
-  <br>
+<br>
 
-  <%= link_to "Back to projects", projects_path %>
-</div>
+<%= link_to "Back to projects", projects_path %>
 
