@@ -24,7 +24,8 @@ Ruby Version: 3.2 or newer
 - [ ] Make bug form appear and reappear at press of a button
 - [ ] Add tests
 - [ ] Add tags for bugs
-
+- [ ] Figure out how to do an inline thing for "author" and "created" section in bugs. How might it integrate with bug notes?
+- [ ] Create a simple navbar from scratch
 
 ## Testing Considerations
 - [ ] Simple scenario of adding projects
