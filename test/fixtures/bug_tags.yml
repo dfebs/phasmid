@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  bug: one
+  bug: bug_one
   tag: one
 
 two:
-  bug: two
+  bug: bug_two
   tag: two

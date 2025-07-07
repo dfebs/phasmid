@@ -2,10 +2,12 @@
 
 one:
   color: MyString
-  project: one
+  project: project_one
   name: MyString
+  weight: 4.5
 
 two:
   color: MyString
-  project: two
+  project: project_two
   name: MyString
+  weight: 3.2
