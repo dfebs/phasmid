@@ -38,27 +38,27 @@ a {
   color: var(--color-primary);
 }
 
- #container {
+#container {
   background-color: var(--color-background);
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-template-rows: 100%;
- }
+}
 
- div[id^="project_"], div[id^="bug_"], div[id^="user_"] {
+div[id^="project_"], div[id^="bug_"], div[id^="user_"] {
   padding: 1em;
   margin: 1em;
   border-radius: 2em;
   background-color: var(--color-surface);
- }
+}
 
- #tag_collection {
+#tag_collection {
   display: block;
   margin-right: 0.5em;
   margin-bottom: 1em
- }
+}
 
- div[id^="tag_"] {
+div[id^="tag_"] {
   display: inline;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
@@ -68,6 +68,20 @@ div[id^="tag_"] span {
   border-radius: 1em;
   padding: 0.5em;
  }
+
+button, input[type="submit"] {
+  all: unset;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: var(--color-accent);
+}
 
  #page_content {
   grid-column: 2;
