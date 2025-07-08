@@ -22,9 +22,14 @@ p, label {
   font-family: "Ubuntu Mono";
 }
 
-h1 {
+h2 {
   font-family: "Departure Mono";
   color: var(--color-background);
+}
+
+h1 {
+  font-family: "Departure Mono";
+  color: var(--color-surface);
 }
 
 a {
@@ -78,49 +83,20 @@ button:hover, input[type="submit"]:hover {
   background-color: var(--color-accent);
 }
 
- #page_content {
+#page_content {
   grid-column: 2;
   grid-row: 1
- }
+}
 
 .trix-content {
   color: var(--color-background);
   font-family: "Ubuntu Mono";
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="email"], input[type="password"], textarea {
   background-color: transparent; /* removes white */
   color: inherit;                /* optional, inherits text color */
   padding: 0.25em;
   border-color: var(--color-accent);
   color: var(--color-background);
 }
-
-
- /* trix-editor {
-  background-color: #212529;
-  color: white;
-  border: 1px solid #444;
-  padding: 1rem;
-}
-
-trix-editor a {
-  color: #66bfff;
-}
-
-trix-editor [data-trix-placeholder] {
-  color: #aaa;
-}
-
-.trix-button-group {
-  background-color: #2c2c2c;
-  border-color: #444;
-}
-
-.trix-button {
-  color: white;
-}
-
-.trix-button--icon::before {
-  filter: invert(100%);
-} */

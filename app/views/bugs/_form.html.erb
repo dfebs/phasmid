@@ -1,6 +1,6 @@
 <%= turbo_frame_tag dom_id(Bug.new) do %>
     <div id="bug_form">
-        <h1>Add Bug</h1>
+        <h2>Add Bug</h2>
         <%= form_with model: [project, bug] do |form| %>
             <div>
                 <%= form.label :title %>
