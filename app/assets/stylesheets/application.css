@@ -52,6 +52,23 @@ a {
   background-color: var(--color-surface);
  }
 
+ #tag_collection {
+  display: block;
+  margin-right: 0.5em;
+  margin-bottom: 1em
+ }
+
+ div[id^="tag_"] {
+  display: inline;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+div[id^="tag_"] span {
+  border-radius: 1em;
+  padding: 0.5em;
+ }
+
  #page_content {
   grid-column: 2;
   grid-row: 1

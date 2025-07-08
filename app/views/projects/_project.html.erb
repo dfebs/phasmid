@@ -1,7 +1,5 @@
 <div id="<%= dom_id project %>">
-  <p>
-    <h1><%= project.title %></h1>
-  </p>
+  <h1><%= project.title %></h1>
 
   <p>
     <%= project.description %>
@@ -11,11 +9,16 @@
     <strong>Owner:</strong>
     <%= project.owner.username %>
   </p>
-    <%= link_to "Edit this project", edit_project_path(project) %> |
-    <%= link_to "Show this project", project %> |
-    <%= link_to "Back to projects", projects_path %>
 
-    <%= button_to "Destroy this project", @project, method: :delete %>
+  <div id="tag_collection">
+    <%= render project.tags %>
+  </div>
+
+  <%= link_to "Edit this project", edit_project_path(project) %> |
+  <%= link_to "Show this project", project %> |
+  <%= link_to "Back to projects", projects_path %>
+
+  <%= button_to "Destroy this project", @project, method: :delete %>
 
       
 </div>

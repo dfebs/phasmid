@@ -33,4 +33,27 @@ module Constants
     "Pacific/Auckland",          # UTC+12, New Zealand
     "Pacific/Kiritimati"         # UTC+14, Line Islands (earliest time zone)
   ]
+
+  DEFAULT_TAGS = [
+    {
+      name: "data-loss",
+      weight: 5.0,
+      color: "#cf3333"
+    },
+    {
+      name: "no-workaround",
+      weight: 3.0,
+      color: "#e27f41"
+    },
+    {
+      name: "flaky",
+      weight: 1.2,
+      color: "#d4d24c"
+    },
+    {
+      name: "cosmetic-bug",
+      weight: 1.5,
+      color: "#8e2598"
+    }
+  ]
 end
