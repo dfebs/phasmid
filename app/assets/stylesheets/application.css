@@ -9,14 +9,7 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
- :root {
-  --color-background: #1d3b11;
-  --color-primary: #4c721d;
-  --color-accent: #99b127;
-  --color-warning: #debf53;
-  --color-surface: #edd090;
-  --color-base: #f8e8ca;
-}
+@import "colors.css";
 
 html, body {
   margin: 0;
@@ -67,6 +60,8 @@ div[id^="tag_"] {
 div[id^="tag_"] span {
   border-radius: 1em;
   padding: 0.5em;
+  background-color: var(--color-accent);
+  color: var(--color-background);
  }
 
 button, input[type="submit"] {
@@ -91,6 +86,14 @@ button:hover, input[type="submit"]:hover {
 .trix-content {
   color: var(--color-background);
   font-family: "Ubuntu Mono";
+}
+
+input[type="text"], textarea {
+  background-color: transparent; /* removes white */
+  color: inherit;                /* optional, inherits text color */
+  padding: 0.25em;
+  border-color: var(--color-accent);
+  color: var(--color-background);
 }
 
 

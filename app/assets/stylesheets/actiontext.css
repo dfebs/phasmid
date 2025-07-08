@@ -2,8 +2,10 @@
  * Default Trix editor styles. See Action Text overwrites below.
 */
 
+@import "colors.css";
+
 trix-editor {
-  border: 1px solid #bbb;
+  border: 1px solid var(--color-accent);
   border-radius: 3px;
   margin: 0;
   padding: 0.4em 0.6em;
@@ -22,9 +24,9 @@ trix-toolbar .trix-button-row {
 trix-toolbar .trix-button-group {
   display: flex;
   margin-bottom: 10px;
-  border: 1px solid #bbb;
-  border-top-color: #ccc;
-  border-bottom-color: #888;
+  border: 1px solid var(--color-accent);
+  border-top-color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
   border-radius: 3px; }
   trix-toolbar .trix-button-group:not(:first-child) {
     margin-left: 1.5vw; }
@@ -49,13 +51,13 @@ trix-toolbar .trix-button {
   margin: 0;
   outline: none;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-accent);
   border-radius: 0;
   background: transparent; }
   trix-toolbar .trix-button:not(:first-child) {
     border-left: 1px solid #ccc; }
   trix-toolbar .trix-button.trix-active {
-    background: #cbeefa;
+    background: var(--color-accent);
     color: black; }
   trix-toolbar .trix-button:not(:disabled) {
     cursor: pointer; }
