@@ -56,6 +56,11 @@ div[id^="tag_"] {
   margin-bottom: 0.5em;
 }
 
+#sidebar_tags {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 div[id^="tag_"] span {
   border-radius: 1em;
   padding: 0.5em;
@@ -83,6 +88,7 @@ button:hover, input[type="submit"]:hover {
 }
 
 #right_bar {
+  display: block;
   grid-column: 3;
   grid-row: 1;
   background-color: var(--color-surface);
@@ -90,6 +96,21 @@ button:hover, input[type="submit"]:hover {
   top: 0;               /* Distance from the top of the viewport */
   align-self: start;    /* Make sure it sticks to the top of the grid cell */
   height: max-content;  /* Prevent stretching */
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+@media (max-width: 1000px) {
+  #right_bar {
+    display: none;
+  }
+}
+
+#right_bar span {
+  display: block;
+  width: fit-content;
 }
 
 .trix-content {
