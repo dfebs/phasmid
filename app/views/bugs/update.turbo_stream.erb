@@ -1,0 +1,2 @@
+<%= turbo_stream.replace dom_id(@bug, :content), partial: "bugs/content", locals: { bug: @bug } %>
+<%= turbo_stream.replace combined_dom_id(@bug.project, @bug), partial: "bugs/edit_button", locals: { bug: @bug, project: @bug.project } %>

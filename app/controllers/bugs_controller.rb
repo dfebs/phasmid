@@ -4,6 +4,23 @@ class BugsController < ApplicationController
     @project = Project.find(params[:project_id])
   end
 
+  def edit
+    @bug = Bug.find(params[:id])
+    @project = @bug.project
+  end
+
+  def update
+    @bug = Bug.find(params[:id])
+
+    if @bug.update(bug_params)
+      respond_to do |format|
+        format.turbo_stream
+      end
+    else
+      format.html { render "projects/show", status: :unprocessable_entity }
+    end
+  end
+
   def create
     @project = Project.find(params[:project_id])
     @bug = @project.bugs.new(bug_params)

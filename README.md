@@ -18,19 +18,24 @@ Ruby Version: 3.2 or newer
 - [x] Show instant feedback when adding a bug
 - [x] Show bugs from other users added in real time
 - [x] See if getting page_content at the top level will work
+- [x] Ability to edit bugs
+- [x] Make bug form appear and reappear at press of a button
+- [ ] Ability to add and edit project level tags
 - [ ] Actually use memberships
+- [ ] Actually use bug notes
 - [ ] Figure out how bug priority feature will work
 - [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame
 - [ ] Add css animations
 - [ ] Create consistent flash messages with stimulus (reference: https://www.hotrails.dev/turbo-rails/flash-messages-hotwire)
-- [ ] Make bug form appear and reappear at press of a button
 - [ ] Add tags for bugs
 - [ ] Figure out how to do an inline thing for "author" and "created" section in bugs. How might it integrate with bug notes?
 - [ ] Create a simple navbar from scratch, add the phasmid logo
-- [ ] Ability to add and edit project level tags
-- [ ] Ability to edit comments
-- [ ] Fix issue where "destroy this project" doesn't work
 - [ ] Maybe use ahoy
+
+## Bugs
+- [ ] Fix issue where tags are appended on editing a bug instead of being modified
+- [ ] Fix issue where "destroy this project" doesn't work
+
 
 ## Testing Considerations
 - [ ] Simple scenario of adding projects

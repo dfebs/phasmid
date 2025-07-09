@@ -1,7 +1,7 @@
 <%= turbo_stream.prepend "bugs" do %>
-    <%= render "bugs/bug", bug: @bug %>
+    <%= render "bugs/bug", bug: @bug, project: @project %>
 <% end %>
 
-<%= turbo_stream.replace dom_id(Bug.new) do %>
-    <%= render "bugs/form", bug: Bug.new, project: @project %>
+<%= turbo_stream.replace combined_dom_id(@project, Bug.new) do %>
+    <%= render "bugs/new_button", bug: Bug.new, project: @project, action: "Create Bug" %>
 <% end %>

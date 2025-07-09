@@ -1,6 +1,6 @@
-<%= turbo_frame_tag dom_id(Bug.new) do %>
+<%= turbo_frame_tag combined_dom_id(project, bug) do %>
     <div id="bug_form">
-        <h2>Add Bug</h2>
+        <h2><%= action %></h2>
         <%= form_with model: [project, bug] do |form| %>
             <div>
                 <%= form.label :title %>
@@ -20,5 +20,6 @@
                 <%= form.submit %>
             </div>
         <% end %>
+        <%= link_to "Cancel", project_path(project) %>
     </div>
 <% end %>

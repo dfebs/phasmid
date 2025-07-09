@@ -2,11 +2,11 @@
   <p style="color: green"><%= notice %></p>
   <%= render @project %>
   <h1>Bugs</h1>
-  <%= render "bugs/form", project: @project, bug: Bug.new %>
+  <%= render "bugs/new_button", project: @project, bug: Bug.new %>
 
   <%= turbo_stream_from "bugs" %>
   <div id="bugs">
-    <%= render @project.bugs.order(created_at: :desc) %>
+    <%= render @project.bugs.order(created_at: :desc), project: @project %>
   </div>
 </div>
 
