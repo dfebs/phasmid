@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 <%= render @project %>
-
+<h1>Bugs</h1>
 <%= render "bugs/form", project: @project, bug: Bug.new %>
 
 <%= turbo_stream_from "bugs" %>

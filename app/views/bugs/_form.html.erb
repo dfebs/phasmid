@@ -12,6 +12,11 @@
             </div>
 
             <div>
+                <%= form.label :tag_ids, "Tags" %><br>
+                <%= form.collection_check_boxes :tag_ids, project.tags, :id, :name %>
+            </div>
+
+            <div>
                 <%= form.submit %>
             </div>
         <% end %>

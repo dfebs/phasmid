@@ -27,6 +27,6 @@ class BugsController < ApplicationController
   end
 
   def bug_params
-    params.expect bug: [ :title, :description ]
+    params.expect bug: [ :title, :description, tag_ids: [] ]
   end
 end
