@@ -50,12 +50,6 @@ div[id^="project_"], div[id^="bug_"], div[id^="user_"] {
   background-color: var(--color-surface);
 }
 
-#tag_collection {
-  display: block;
-  margin-right: 0.5em;
-  margin-bottom: 1em
-}
-
 div[id^="tag_"] {
   display: inline;
   margin-right: 0.5em;
@@ -86,6 +80,16 @@ button:hover, input[type="submit"]:hover {
 #page_content {
   grid-column: 2;
   grid-row: 1
+}
+
+#right_bar {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: var(--color-surface);
+  position: sticky;
+  top: 0;               /* Distance from the top of the viewport */
+  align-self: start;    /* Make sure it sticks to the top of the grid cell */
+  height: max-content;  /* Prevent stretching */
 }
 
 .trix-content {

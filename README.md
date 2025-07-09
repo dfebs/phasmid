@@ -24,10 +24,13 @@ Ruby Version: 3.2 or newer
 - [ ] Add css animations
 - [ ] Create consistent flash messages with stimulus (reference: https://www.hotrails.dev/turbo-rails/flash-messages-hotwire)
 - [ ] Make bug form appear and reappear at press of a button
-- [ ] Add tests
 - [ ] Add tags for bugs
 - [ ] Figure out how to do an inline thing for "author" and "created" section in bugs. How might it integrate with bug notes?
 - [ ] Create a simple navbar from scratch, add the phasmid logo
+- [ ] Ability to add and edit project level tags
+- [ ] Ability to edit comments
+- [ ] Fix issue where "destroy this project" doesn't work
+- [ ] Maybe use ahoy
 
 ## Testing Considerations
 - [ ] Simple scenario of adding projects
