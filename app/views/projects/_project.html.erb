@@ -10,10 +10,6 @@
     <%= project.owner.username %>
   </p>
 
-  <div id="tag_collection">
-    <%= render project.tags %>
-  </div>
-
   <%= link_to "Edit this project", edit_project_path(project) %> |
   <%= link_to "Show this project", project %> |
   <%= link_to "Back to projects", projects_path %>
