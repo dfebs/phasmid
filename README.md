@@ -35,6 +35,7 @@ Ruby Version: 3.2 or newer
 ## Bugs
 - [ ] Fix issue where tags are appended on editing a bug instead of being modified
 - [ ] Fix issue where "destroy this project" doesn't work
+- [ ] Fix issue where the real time bug additions will be applied to all projects
 
 
 ## Testing Considerations
