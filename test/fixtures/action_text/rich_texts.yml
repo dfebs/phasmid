@@ -1,4 +1,9 @@
-# one:
-#   record: name_of_fixture (ClassOfFixture)
-#   name: content
-#   body: <p>In a <i>million</i> stars!</p>
+one:
+  record: bug_one (Bug)
+  name: description
+  body: <p>In a <i>million</i> stars!</p>
+
+two:
+  record: bug_two (Bug)
+  name: description
+  body: <p>Aw shid here we go again</p>

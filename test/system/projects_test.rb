@@ -19,12 +19,11 @@ class ProjectsTest < ApplicationSystemTestCase
     click_on "Create Project"
 
     assert_text "Project was successfully created"
-    click_on "Back"
   end
 
   test "should update Project" do
     sign_in_as users(:user_one)
-    click_on "Show this project", match: :first
+    click_on @project.title, match: :first
     click_on "Edit this project", match: :first
 
     fill_in "Title", with: @project.title
@@ -36,7 +35,7 @@ class ProjectsTest < ApplicationSystemTestCase
 
   test "should destroy Project" do
     sign_in_as users(:user_one)
-    click_on "Show this project", match: :first
+    click_on @project.title, match: :first
     click_on "Destroy this project", match: :first
 
     assert_text "Project was successfully destroyed"
