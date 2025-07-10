@@ -1,0 +1,7 @@
+<%= turbo_stream.replace "tags_editable" do %>
+    <%= render "tags/tags_editable", tags: @project.tags %>
+<% end %>
+
+<%= turbo_stream.replace combined_dom_id(@project, Tag.new) do %>
+    <%= render "tags/new_button", tag: Tag.new, project: @project, action: "Create" %>
+<% end %>

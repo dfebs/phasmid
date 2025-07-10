@@ -1,0 +1,13 @@
+<div id="tags_editable">
+    <% for tag in tags %>
+        <div id="edit_tag" style="display: flex;">
+            <p><%= tag.name %></p>
+
+            <div style="margin-left: auto; display: flex; gap: 1em">
+                <p>Weight: <%= tag.weight %></p>
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+    <% end %>
+</div>

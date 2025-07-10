@@ -1,5 +1,6 @@
-<div id="tag_form">
-    <h1>Add Tag</h1>
+<%= turbo_frame_tag combined_dom_id(project, tag) do %>
+    <div id="bubble">
+    <h2><%= action %> Tag</h2>
     <%= form_with model: [project, tag] do |form| %>
         <div>
             <%= form.label :name %>
@@ -7,14 +8,13 @@
         </div>
         <div>
             <%= form.label :weight %>
-            <%= form.number_field :weight %>
-        </div>
-        <div>
-            <%= form.label :color %>
-            <%= form.color_field :color %>
+            <%= form.number_field :weight, in: 0..5, step: 0.1 %>
         </div>
         <div>
             <%= form.submit %>
         </div>
     <% end %>
+
+    <%= link_to "Cancel", edit_project_path(project) %>
 </div>
+<% end %>

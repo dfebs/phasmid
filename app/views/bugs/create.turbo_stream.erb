@@ -3,5 +3,5 @@
 <% end %>
 
 <%= turbo_stream.replace combined_dom_id(@project, Bug.new) do %>
-    <%= render "bugs/new_button", bug: Bug.new, project: @project, action: "Create Bug" %>
+    <%= render "bugs/new_button", bug: Bug.new, project: @project %>
 <% end %>

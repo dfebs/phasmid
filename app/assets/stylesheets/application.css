@@ -43,7 +43,7 @@ a {
   grid-template-rows: 100%;
 }
 
-div[id^="project_"], div[id^="bug_"], div[id^="user_"] {
+div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
   padding: 1em;
   margin: 1em;
   border-radius: 2em;
@@ -66,7 +66,24 @@ div[id^="tag_"] span {
   padding: 0.5em;
   background-color: var(--color-accent);
   color: var(--color-background);
- }
+}
+
+#edit_tag {
+  display: flex;
+  border-radius: 1em;
+  padding: 0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  margin-bottom: 1em;
+  align-items: center;
+}
+
+#edit_tag button {
+  margin-left: auto;
+}
 
 button, input[type="submit"] {
   all: unset;
@@ -93,7 +110,7 @@ button:hover, input[type="submit"]:hover {
   grid-row: 1;
   background-color: var(--color-surface);
   position: sticky;
-  top: 0;               /* Distance from the top of the viewport */
+  top: 1em;               /* Distance from the top of the viewport */
   align-self: start;    /* Make sure it sticks to the top of the grid cell */
   height: max-content;  /* Prevent stretching */
   padding: 1em;
@@ -118,10 +135,14 @@ button:hover, input[type="submit"]:hover {
   font-family: "Ubuntu Mono";
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea {
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea {
   background-color: transparent; /* removes white */
   color: inherit;                /* optional, inherits text color */
   padding: 0.25em;
   border-color: var(--color-accent);
   color: var(--color-background);
+}
+
+input:not([type="button"]):not([type="submit"]):focus, textarea:focus {
+  outline: 2px solid var(--color-base); /* Indigo-600, for example */
 }

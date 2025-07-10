@@ -6,5 +6,10 @@
     <%= render "form", project: @project, action: "Edit Project" %>
 
     <br>
+
+    <div id="bubble">
+        <%= render "tags/tags_editable", tags: @project.tags %>
+        <%= render "tags/new_button", tag: Tag.new, project: @project, action: "Create" %>
+    </div>
 </div>
 

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :projects do
     resources :bugs
+    resources :tags
   end
   resource :session
   resources :passwords, param: :token
