@@ -5,10 +5,6 @@
   <% content_for :title, "Projects" %>
 
   <h1>Projects</h1>
-  <div id="projects">
-    <% @projects.each do |project| %>
-      <%= render project, project: project %>
-    <% end %>
-  </div>
+  <%= render @projects %>
   <%= link_to "New project", new_project_path %>
 </div>

@@ -4,7 +4,7 @@ class Project < ApplicationRecord
   has_many :bugs, dependent: :destroy
   has_many :tags, dependent: :destroy
 
-  after_commit :create_default_tags
+  after_create_commit :create_default_tags
 
   def owner
     memberships.find_by(role: "owner")&.member
