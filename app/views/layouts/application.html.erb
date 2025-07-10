@@ -21,10 +21,11 @@
   </head>
 
   <body>
-    <div id="container">
-      <%# TODO: Ideally the navbar would be a direct child of container, not content.  %>
+    <div id="base">
       <%= render "layouts/nav" %>
-      <%= yield %>
+      <div id="container">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

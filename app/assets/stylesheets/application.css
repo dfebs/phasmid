@@ -36,11 +36,46 @@ a {
   color: var(--color-primary);
 }
 
+#base {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5% 1fr 5%;
+  height: 100vh;
+  /* ^ The height makes it so that the base will always at least fill the viewport. */
+}
+
 #container {
   background-color: var(--color-background);
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 100%;
+  grid-template-rows: auto;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+nav {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: var(--color-primary);
+}
+
+#page_content {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#right_bar {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: var(--color-surface);
+  position: sticky;
+  top: 5em;               /* Distance from the top of the viewport */
+  align-self: start;    /* Make sure it sticks to the top of the grid cell */
+  height: max-content;  /* Prevent stretching */
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-right: 2em;
+  margin-left: 2em;
 }
 
 div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
@@ -97,26 +132,6 @@ button, input[type="submit"] {
 
 button:hover, input[type="submit"]:hover {
   background-color: var(--color-accent);
-}
-
-#page_content {
-  grid-column: 2;
-  grid-row: 1
-}
-
-#right_bar {
-  display: block;
-  grid-column: 3;
-  grid-row: 1;
-  background-color: var(--color-surface);
-  position: sticky;
-  top: 1em;               /* Distance from the top of the viewport */
-  align-self: start;    /* Make sure it sticks to the top of the grid cell */
-  height: max-content;  /* Prevent stretching */
-  padding: 1em;
-  border-radius: 0.5em;
-  margin-right: 2em;
-  margin-left: 2em;
 }
 
 @media (max-width: 1000px) {
