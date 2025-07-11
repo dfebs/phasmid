@@ -1,5 +1,6 @@
 <div id="page_content">
   <p style="color: green"><%= notice %></p>
+  <h1>Project Information</h1>
   <%= render @project %>
   <h1>Bugs</h1>
   <%= render "bugs/new_button", project: @project, bug: Bug.new %>
