@@ -1,7 +1,7 @@
 <div id="page_content">
     <% content_for :title, "Editing project" %>
 
-    <h1>Editing project</h1>
+    <h1><%= @project.title %></h1>
 
     <%= render "form", project: @project, action: "Edit Project" %>
 
