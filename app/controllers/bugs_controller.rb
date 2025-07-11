@@ -11,8 +11,10 @@ class BugsController < ApplicationController
 
   def update
     @bug = Bug.find(params[:id])
+    filtered_params = bug_params
 
-    if @bug.update(bug_params)
+    if @bug.update(filtered_params)
+      @bug.bug_tags.where.not(tag_id: filtered_params[:tag_ids]).destroy_all
       respond_to do |format|
         format.turbo_stream
       end
@@ -44,6 +46,8 @@ class BugsController < ApplicationController
   end
 
   def bug_params
-    params.expect bug: [ :title, :description, tag_ids: [] ]
+    final_params = params.expect bug: [ :title, :description, tag_ids: [] ]
+    final_params[:tag_ids] = final_params[:tag_ids].reject { |tag_id| tag_id.blank? || @bug.bug_tags.exists?(tag_id) }
+    final_params
   end
 end
