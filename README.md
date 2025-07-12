@@ -26,7 +26,7 @@ Ruby Version: 3.2 or newer
 - [x] Add tags for bugs
 - [ ] Add "My Bugs" section in left sidebar
 - [ ] Add ability for bugs to be complete
-- [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame. "Latest" section will have the tuned-in stream
+- [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame. "Latest" section will have the tuned-in stream. Maybe a completed section?
 - [ ] Create a simple navbar from scratch, add the phasmid logo
 - [ ] Add css animations
 - [ ] Actually use memberships
