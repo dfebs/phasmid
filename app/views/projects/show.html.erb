@@ -14,6 +14,6 @@
 <div id="right_bar">
   <h2>Project Tags</h2>
   <div id="sidebar_tags">
-    <%= render @project.tags %>
+    <%= render @project.tags.order(weight: :desc) %>
   </div>
 </div>
