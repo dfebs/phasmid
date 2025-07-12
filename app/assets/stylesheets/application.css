@@ -83,6 +83,9 @@ nav a, nav button {
   border-radius: 0.5em;
   margin-right: 2em;
   margin-left: 2em;
+  border: solid;
+  border-color: var(--color-shadow);
+  border-width: 0.20em;
 }
 
 div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
@@ -90,6 +93,9 @@ div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
   margin: 1em;
   border-radius: 2em;
   background-color: var(--color-surface);
+  border: solid;
+  border-color: var(--color-shadow);
+  border-width: 0.20em;
 }
 
 div[id^="tag_"] {
@@ -110,7 +116,7 @@ div[id^="tag_"] span {
   color: var(--color-background);
 }
 
-#edit_tag {
+div[id^="edit_tag"] {
   display: flex;
   border-radius: 1em;
   padding: 0.25em;
@@ -157,7 +163,7 @@ button:hover, input[type="submit"]:hover {
   font-family: "Ubuntu Mono";
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea {
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
   background-color: transparent; /* removes white */
   color: inherit;                /* optional, inherits text color */
   padding: 0.25em;
