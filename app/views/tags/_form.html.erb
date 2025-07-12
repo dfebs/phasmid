@@ -1,6 +1,6 @@
 <%= turbo_frame_tag combined_dom_id(project, tag) do %>
     <div id="bubble">
-    <h2><%= action %> Tag</h2>
+    <h2><%= action %></h2>
     <%= form_with model: [project, tag] do |form| %>
         <div>
             <%= form.label :name %>

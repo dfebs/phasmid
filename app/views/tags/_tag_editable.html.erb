@@ -1,0 +1,9 @@
+<div id="<%= dom_id(tag, :edit) %>" style="display: flex;">
+    <p><%= tag.name %></p>
+
+    <div style="margin-left: auto; display: flex; gap: 1em">
+        <p>Weight: <%= tag.weight %></p>
+        <%= render "tags/edit_button", tag: tag, project: tag.project %>
+        <button>Delete</button>
+    </div>
+</div>

@@ -20,20 +20,21 @@ Ruby Version: 3.2 or newer
 - [x] See if getting page_content at the top level will work
 - [x] Ability to edit bugs
 - [x] Make bug form appear and reappear at press of a button
-- [ ] Ability to add and edit project level tags
+- [x] Ability to add project level tags
+- [x] Figure out how bug priority feature will work. This will be based on a bug score.
+- [x] Add ability to edit project level tags
+- [x] Add tags for bugs
+- [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame. "Latest" section will have the tuned-in stream
+- [ ] Create a simple navbar from scratch, add the phasmid logo
+- [ ] Add css animations
 - [ ] Actually use memberships
 - [ ] Actually use bug notes
-- [ ] Figure out how bug priority feature will work
-- [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame
-- [ ] Add css animations
 - [ ] Create consistent flash messages with stimulus (reference: https://www.hotrails.dev/turbo-rails/flash-messages-hotwire)
-- [ ] Add tags for bugs
 - [ ] Figure out how to do an inline thing for "author" and "created" section in bugs. How might it integrate with bug notes?
-- [ ] Create a simple navbar from scratch, add the phasmid logo
 - [ ] Maybe use ahoy
 
 ## Bugs
-- [ ] Fix issue where tags are appended on editing a bug instead of being modified
+- [x] Fix issue where tags are appended on editing a bug instead of being modified
 - [x] Fix issue where "destroy this project" doesn't work
 - [x] Fix issue where the real time bug additions will be applied to all projects. Might be able to target the broadcast based on the project + bug name
 

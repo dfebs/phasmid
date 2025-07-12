@@ -1,0 +1,3 @@
+<%= turbo_stream.replace dom_id(@tag, :edit) do %>
+    <%= render "tags/tag_editable", tag: @tag %>
+<% end %>
