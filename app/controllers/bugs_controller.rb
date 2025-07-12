@@ -25,6 +25,7 @@ class BugsController < ApplicationController
 
   def create
     @project = Project.find(params[:project_id])
+    @bug = Bug.new
     @bug = @project.bugs.new(bug_params)
     @bug.author = Current.user
 
@@ -47,7 +48,7 @@ class BugsController < ApplicationController
 
   def bug_params
     final_params = params.expect bug: [ :title, :description, tag_ids: [] ]
-    final_params[:tag_ids] = final_params[:tag_ids].reject { |tag_id| tag_id.blank? || @bug.bug_tags.exists?(tag_id) }
+    final_params[:tag_ids] = final_params[:tag_ids].reject { |tag_id| tag_id.blank? || @bug.bug_tags.exists?(tag_id) } if @bug.tags.any?
     final_params
   end
 end
