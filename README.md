@@ -24,6 +24,8 @@ Ruby Version: 3.2 or newer
 - [x] Figure out how bug priority feature will work. This will be based on a bug score.
 - [x] Add ability to edit project level tags
 - [x] Add tags for bugs
+- [ ] Add "My Bugs" section in left sidebar
+- [ ] Add ability for bugs to be complete
 - [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame. "Latest" section will have the tuned-in stream
 - [ ] Create a simple navbar from scratch, add the phasmid logo
 - [ ] Add css animations
