@@ -72,7 +72,8 @@ nav a, nav button {
 }
 
 div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
-  padding: 1em;
+  padding-left: 1em;
+  padding-bottom: 1.15em;
   margin-bottom: 1em;
   border-radius: 2em;
   background-color: var(--color-surface);

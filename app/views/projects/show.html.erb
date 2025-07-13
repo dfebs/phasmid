@@ -12,6 +12,8 @@
   <%= render @project %>
   <h1>Bugs</h1>
   <%= render "bugs/new_button", project: @project, bug: Bug.new %>
+  <br>
+  <br>
 
   <%= turbo_stream_from "project_bugs_sub_#{@project.id}" %>
   <div id="bugs">

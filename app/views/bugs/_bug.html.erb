@@ -6,6 +6,6 @@
 <% else %>
     <div id="<%= dom_id(bug) %>">
         <%= render "bugs/content", bug: bug %>
-        <%= render "bugs/edit_button", project: project, bug: bug %>
+        <%= render "bugs/edit_button", project: project, bug: bug if Current.user == bug.author %>
     </div>
 <% end %>
