@@ -22,7 +22,7 @@ p, label {
   font-family: "Ubuntu Mono";
 }
 
-h2 {
+h2, h3 {
   font-family: "Departure Mono";
   color: var(--color-background);
 }
@@ -92,11 +92,17 @@ div[id^="tag_"] {
   margin-bottom: 0.5em;
 }
 
-div[id^="tag_"] span {
+div[id^="tag_"] span, div[id^="bug_"] span {
   border-radius: 1em;
   padding: 0.5em;
   background-color: var(--color-accent);
   color: var(--color-background);
+  font-family: "Ubuntu Mono";
+}
+
+hr {
+  border-color: var(--color-background);
+  opacity: 0.2;
 }
 
 div[id^="edit_tag"] {

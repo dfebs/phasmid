@@ -5,9 +5,11 @@ bug_one:
   author: user_one
   project: project_one
   notes: MyString
+  completed: false
 
 bug_two:
   title: MyString
   author: user_two
   project: project_two
   notes: MyString
+  completed: false
