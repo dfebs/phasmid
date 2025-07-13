@@ -27,13 +27,13 @@ Ruby Version: 3.2 or newer
 - [ ] Add "My Bugs" section in left sidebar
 - [ ] Add ability for bugs to be complete
 - [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame. "Latest" section will have the tuned-in stream. Maybe a completed section?
-- [ ] Create a simple navbar from scratch, add the phasmid logo
-- [ ] Add css animations
 - [ ] Actually use memberships
-- [ ] Actually use bug notes
 - [ ] Create consistent flash messages with stimulus (reference: https://www.hotrails.dev/turbo-rails/flash-messages-hotwire)
 - [ ] Figure out how to do an inline thing for "author" and "created" section in bugs. How might it integrate with bug notes?
+- [ ] Create a simple navbar from scratch, add the phasmid logo
+- [ ] Add css animations
 - [ ] Maybe use ahoy
+- [ ] Actually use bug notes
 
 ## Bugs
 - [x] Fix issue where tags are appended on editing a bug instead of being modified
