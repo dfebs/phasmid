@@ -1,4 +1,11 @@
-<div id="<%= dom_id(bug) %>">
-    <%= render "bugs/content", bug: bug %>
-    <%= render "bugs/edit_button", project: project, bug: bug %>
-</div>
+
+<% if type == "sidebar" %>
+    <div id="<%= dom_id(bug, :sidebar) %>">
+        <p><%= link_to bug.title, project_path(bug.project, anchor: dom_id(bug)) %></p>
+    </div>
+<% else %>
+    <div id="<%= dom_id(bug) %>">
+        <%= render "bugs/content", bug: bug %>
+        <%= render "bugs/edit_button", project: project, bug: bug %>
+    </div>
+<% end %>

@@ -71,23 +71,6 @@ nav a, nav button {
   grid-row: 1;
 }
 
-#right_bar {
-  grid-column: 3;
-  grid-row: 1;
-  background-color: var(--color-surface);
-  position: sticky;
-  top: 5em;               /* Distance from the top of the viewport */
-  align-self: start;    /* Make sure it sticks to the top of the grid cell */
-  height: max-content;  /* Prevent stretching */
-  padding: 1em;
-  border-radius: 0.5em;
-  margin-right: 2em;
-  margin-left: 2em;
-  border: solid;
-  border-color: var(--color-shadow);
-  border-width: 0.20em;
-}
-
 div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
   padding: 1em;
   margin: 1em;
@@ -147,12 +130,47 @@ button:hover, input[type="submit"]:hover {
   background-color: var(--color-accent);
 }
 
+#right_bar {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: var(--color-surface);
+  position: sticky;
+  top: 5em;               /* Distance from the top of the viewport */
+  align-self: start;    /* Make sure it sticks to the top of the grid cell */
+  height: max-content;  /* Prevent stretching */
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-right: 2em;
+  margin-left: 2em;
+  border: solid;
+  border-color: var(--color-shadow);
+  border-width: 0.20em;
+}
+
+#left_bar {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--color-surface);
+  position: sticky;
+  top: 5em;               /* Distance from the top of the viewport */
+  align-self: start;    /* Make sure it sticks to the top of the grid cell */
+  height: max-content;  /* Prevent stretching */
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-right: 2em;
+  margin-left: 2em;
+  border: solid;
+  border-color: var(--color-shadow);
+  border-width: 0.20em;
+}
+
 @media (max-width: 1000px) {
-  #right_bar {
+  #right_bar, #left_bar {
     display: none;
   }
 }
 
+/* todo maybe delete this? */
 #right_bar span {
   display: block;
   width: fit-content;

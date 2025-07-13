@@ -1,5 +1,5 @@
 <%= turbo_stream.prepend "bugs" do %>
-    <%= render "bugs/bug", bug: @bug, project: @project %>
+    <%= render "bugs/bug", bug: @bug, project: @project, type: "main" %>
 <% end %>
 
 <%= turbo_stream.replace combined_dom_id(@project, Bug.new) do %>

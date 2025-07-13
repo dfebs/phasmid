@@ -1,3 +1,11 @@
+<%# TODO THIS NEEDS TO GO SOMEWHERE ELSE %>
+<div id="left_bar">
+  <h2>My Logged Bugs</h2>
+  <div id="sidebar_bugs">
+    <%= render @project.bugs.where(author: Current.user).order(title: :desc), project: @project, type: "sidebar" %>
+  </div>
+</div>
+
 <div id="page_content">
   <p style="color: green"><%= notice %></p>
   <h1>Project Information</h1>
@@ -7,7 +15,7 @@
 
   <%= turbo_stream_from "project_bugs_sub_#{@project.id}" %>
   <div id="bugs">
-    <%= render @project.bugs.order(created_at: :desc), project: @project %>
+    <%= render @project.bugs.order(created_at: :desc), project: @project, type: "main" %>
   </div>
 </div>
 
