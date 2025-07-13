@@ -54,11 +54,10 @@ a {
 }
 
 nav {
+  display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-row: 1;
-  grid-column: 1;
   background-color: var(--color-primary);
-  display: grid;
 }
 
 nav a, nav button {
@@ -72,8 +71,7 @@ nav a, nav button {
 }
 
 div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
-  padding-left: 1em;
-  padding-bottom: 1.15em;
+  padding: 1em;
   margin-bottom: 1em;
   border-radius: 2em;
   background-color: var(--color-surface);

@@ -1,9 +1,9 @@
 <nav class="menu">
-    <%= link_to "Home", root_path %>
     <% if !authenticated? %>
       <%= link_to "Register", new_user_path %>
       <%= link_to "Login", new_session_path %>
     <% else %>
+    <%= link_to "Home", root_path %>
       <%= button_to "Logout", session_path, method: :delete %>
     <% end %>
 </nav>

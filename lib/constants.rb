@@ -54,6 +54,11 @@ module Constants
       name: "cosmetic-bug",
       weight: 1.5,
       color: "#8e2598"
+    },
+    {
+      name: "attack-vector",
+      weight: 5,
+      color: "#0dfeb5"
     }
   ]
 end
