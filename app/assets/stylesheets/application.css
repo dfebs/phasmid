@@ -68,6 +68,8 @@ nav a, nav button {
 #page_content {
   grid-column: 2;
   grid-row: 1;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
@@ -91,7 +93,7 @@ div[id^="tag_"] {
   margin-bottom: 0.5em;
 }
 
-div[id^="tag_"] span, div[id^="bug_"] span {
+div[id^="tag_"] span, span[type="score"] {
   border-radius: 1em;
   padding: 0.5em;
   background-color: var(--color-accent);
@@ -172,6 +174,12 @@ button:hover, input[type="submit"]:hover {
 @media (max-width: 1000px) {
   #right_bar, #left_bar {
     display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  #page_content {
+    grid-column: 1 / 4;
   }
 }
 
