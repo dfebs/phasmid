@@ -72,6 +72,16 @@ nav a, nav button {
   padding-right: 1em;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
   padding: 1em;
   margin-bottom: 1em;
@@ -80,6 +90,8 @@ div[id^="project_"], div[id^="bug_"], div[id^="user_"], #bubble {
   border: solid;
   border-color: var(--color-shadow);
   border-width: 0.20em;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
 }
 
 div[id^="tag_"] {
@@ -152,6 +164,8 @@ button:hover, input[type="submit"]:hover {
   border: solid;
   border-color: var(--color-shadow);
   border-width: 0.20em;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
 }
 
 #left_bar {
@@ -169,6 +183,8 @@ button:hover, input[type="submit"]:hover {
   border: solid;
   border-color: var(--color-shadow);
   border-width: 0.20em;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
 }
 
 @media (max-width: 1000px) {
