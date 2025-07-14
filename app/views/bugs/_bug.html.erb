@@ -7,5 +7,6 @@
     <div id="<%= dom_id(bug) %>">
         <%= render "bugs/content", bug: bug %>
         <%= render "bugs/edit_button", project: project, bug: bug if Current.user == bug.author %>
+        <%= render "bugs/form_toggle_completion", project: project, bug: bug  %>
     </div>
 <% end %>

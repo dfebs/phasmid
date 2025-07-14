@@ -1,0 +1,10 @@
+<%= turbo_frame_tag "completion_#{combined_dom_id(project, bug)}" do %>
+    <%= form_with model: [project, bug] do |form| %>
+        <div>
+            <%= form.hidden_field :completed, value: !bug.completed %>
+        </div>
+        <div>
+            <%= form.submit "Mark #{"in" if bug.completed}complete" %>
+        </div>
+    <% end %>
+<% end %>

@@ -47,8 +47,10 @@ class BugsController < ApplicationController
   end
 
   def bug_params
-    final_params = params.expect bug: [ :title, :description, tag_ids: [] ]
-    final_params[:tag_ids] = final_params[:tag_ids].reject { |tag_id| tag_id.blank? || @bug.bug_tags.exists?(tag_id) } if @bug.tags.any?
+    final_params = params.expect bug: [ :title, :description, :completed, tag_ids: [] ]
+    if final_params.has_value?(:tag_ids)
+      final_params[:tag_ids] = final_params[:tag_ids].reject { |tag_id| tag_id.blank? || @bug.bug_tags.exists?(tag_id) } if @bug.tags.any?
+    end
     final_params
   end
 end
