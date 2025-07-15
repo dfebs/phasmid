@@ -4,6 +4,6 @@
     <div style="margin-left: auto; display: flex; gap: 1em">
         <p>Weight: <%= tag.weight %></p>
         <%= render "tags/edit_button", tag: tag, project: tag.project %>
-        <button>Delete</button>
+        <%= button_to "Delete", project_tag_path(tag.project, tag), method: :delete %>
     </div>
 </div>

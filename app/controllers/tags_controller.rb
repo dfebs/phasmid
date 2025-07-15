@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  before_action :set_project_and_tag, only: %i[ edit update ]
+  before_action :set_project_and_tag, only: %i[ destroy edit update ]
   def new
     @tag = Tag.new
     @project = Project.find(params[:project_id])
@@ -30,6 +30,13 @@ class TagsController < ApplicationController
       end
     else
       render "projects/show", status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @tag.destroy!
+    respond_to do |format|
+      format.html { redirect_to edit_project_path, status: :see_other, notice: "Tag was successfully destroyed." }
     end
   end
 
