@@ -1,5 +1,5 @@
 class BugsController < ApplicationController
-  before_action :verify_user, only: %i[edit update]
+  before_action :verify_user, only: %i[destroy edit update]
   def new
     @bug = Bug.new
     @project = Project.find(params[:project_id])
@@ -20,7 +20,7 @@ class BugsController < ApplicationController
         format.turbo_stream
       end
     else
-      format.html { render "projects/show", status: :unprocessable_entity }
+      render "projects/show", status: :unprocessable_entity
     end
   end
 
@@ -39,6 +39,14 @@ class BugsController < ApplicationController
         flash.now[:alert] = "Failed to create bug"
         format.html { render "projects/show", status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy
+    @bug.destroy!
+
+    respond_to do |format|
+      format.html { redirect_to project_path(@bug.project), status: :see_other, notice: "Bug was successfully destroyed." }
     end
   end
 
