@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  before_action :set_project_and_tag, only: %i[ destroy edit update ]
+  before_action :verify_user, only: %i[ destroy edit update ]
   def new
     @tag = Tag.new
     @project = Project.find(params[:project_id])
@@ -48,5 +48,10 @@ class TagsController < ApplicationController
   def set_project_and_tag
     @tag = Tag.find(params[:id])
     @project = @tag.project
+  end
+
+  def verify_user
+    set_project_and_tag
+    redirect_to root_path, alert: "NO, BAD." and return if Current.user != @project.owner
   end
 end
