@@ -25,14 +25,14 @@ Ruby Version: 3.2 or newer
 - [x] Add ability to edit project level tags
 - [x] Add tags for bugs
 - [x] Add "My Bugs" section in left sidebar
-- [ ] Add ability for bugs to be complete
+- [x] Add ability for bugs to be complete
+- [x] Figure out how to do an inline thing for "author" and "created" section in bugs.
+- [x] Create a simple navbar from scratch (technically done but not well)
+- [x] Add css animations
+- [x] Have middle content expand across page if screen is small enough
 - [ ] Have a "latest" section and a "priority" section. Can be separated using buttons and a turbo frame. "Latest" section will have the tuned-in stream. Maybe a completed section?
 - [ ] Actually use memberships
-- [ ] Create consistent flash messages with stimulus (reference: https://www.hotrails.dev/turbo-rails/flash-messages-hotwire)
-- [ ] Figure out how to do an inline thing for "author" and "created" section in bugs. How might it integrate with bug notes?
-- [ ] Create a simple navbar from scratch, add the phasmid logo
-- [ ] Add css animations
-- [ ] Have middle content expand across page if screen is small enough
+- [ ] Create consistent flash messages with stimulus (reference: https://www.hotrails.dev/turbo-rails/flash-messages-hotwire)\
 - [ ] Maybe use ahoy
 - [ ] Actually use bug notes
 
