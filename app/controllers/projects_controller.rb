@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: %i[ show edit update destroy ]
+  before_action :set_project, only: %i[ show ]
+  before_action :verify_user, only: %i[ edit update destroy ]
 
   # GET /projects or /projects.json
   def index
@@ -70,5 +71,10 @@ class ProjectsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def project_params
       params.expect(project: [ :title, :description ])
+    end
+
+    def verify_user
+      set_project
+      redirect_to root_path, alert: "NO, BAD." and return if Current.user != @project.owner
     end
 end

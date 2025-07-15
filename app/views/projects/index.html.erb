@@ -6,7 +6,9 @@
 </div>
 
 <div id="page_content">
-  <p style="color: green"><%= notice %></p>
+  <% flash.each do |type, message| %>
+    <p style="color: <%= type == "alert" ? "red" : "green" %>"><%= message %></p>
+  <% end %>
 
   <% content_for :title, "Projects" %>
 

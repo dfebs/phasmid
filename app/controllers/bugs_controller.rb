@@ -1,4 +1,5 @@
 class BugsController < ApplicationController
+  before_action :verify_user, only: %i[edit update]
   def new
     @bug = Bug.new
     @project = Project.find(params[:project_id])
@@ -43,7 +44,12 @@ class BugsController < ApplicationController
 
   private
   def set_bug
-    @bug = Bug.find(params.expect(:id))
+    @bug = Bug.find(params[:id])
+  end
+
+  def verify_user
+    set_bug
+    redirect_to root_path, alert: "NO, BAD. You can't edit other user's bugs" and return if Current.user != @bug.author && Current.user != @bug.project.owner
   end
 
   def bug_params
