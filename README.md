@@ -11,6 +11,9 @@ Ruby Version: 3.2 or newer
 1. `bin/rails db:setup`
 1. `bin/rails server`
 
+## For those who are curious about the 2-week version
+This was done as part of the [1212 learning process](https://dfebs.com/2025/05/25/1212/). If you would like to see the version of this repository that was done in the 2 week time period, see the [legacy](https://github.com/dfebs/phasmid/tree/legacy) branch. 
+
 ## Todo
 - [x] Add projects
 - [x] Add memberships
