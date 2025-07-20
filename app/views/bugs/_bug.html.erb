@@ -7,7 +7,7 @@
     <div id="<%= dom_id(bug) %>">
         <%= render "bugs/content", bug: bug %>
         <%= render "bugs/edit_button", project: project, bug: bug if Current.user == bug.author %>
-        <% if Current.user == project.owner %>
+        <% if Current.user == project.owner || Current.user.admin %>
             <%= button_to "Destroy bug", project_bug_path(project, bug), method: :delete %>
             <%= render "bugs/form_toggle_completion", project: project, bug: bug %>
         <% end %>

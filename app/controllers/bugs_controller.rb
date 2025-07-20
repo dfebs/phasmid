@@ -57,7 +57,7 @@ class BugsController < ApplicationController
 
   def verify_user
     set_bug
-    redirect_to root_path, alert: "NO, BAD. You can't edit other user's bugs" and return if Current.user != @bug.author && Current.user != @bug.project.owner
+    redirect_to root_path, alert: "NO, BAD. You can't edit other user's bugs" and return if Current.user != @bug.author && Current.user != @bug.project.owner && !Current.user.admin
   end
 
   def bug_params

@@ -52,6 +52,6 @@ class TagsController < ApplicationController
 
   def verify_user
     set_project_and_tag
-    redirect_to root_path, alert: "NO, BAD." and return if Current.user != @project.owner
+    redirect_to root_path, alert: "NO, BAD." and return if Current.user != @project.owner && !Current.user.admin
   end
 end

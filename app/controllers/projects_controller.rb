@@ -75,6 +75,6 @@ class ProjectsController < ApplicationController
 
     def verify_user
       set_project
-      redirect_to root_path, alert: "NO, BAD." and return if Current.user != @project.owner
+      redirect_to root_path, alert: "NO, BAD." and return if Current.user != @project.owner && !Current.user.admin
     end
 end

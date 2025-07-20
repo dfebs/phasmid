@@ -16,6 +16,8 @@ module Phasmid
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
+    config.active_storage_dashboard.base_controller_class = "AdminController"
+
     config.assets.paths << Rails.root.join("app/assets/fonts")
 
     # Configuration for the application, engines, and railties goes here.
